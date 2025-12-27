@@ -9,7 +9,7 @@ KOYEB_ACCOUNTS = json.loads(os.getenv("KOYEB_ACCOUNTS"))
 def send_tg_message(message):
     bot_token = os.getenv("TG_BOT_TOKEN")
     chat_id = os.getenv("TG_CHAT_ID")
-    url = "https://api.telegram.org/bot{bot_token}/sendMessage"
+    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
     data = {
         "chat_id": chat_id,
         "text": message,
